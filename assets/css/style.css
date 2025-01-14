@@ -30,7 +30,10 @@ a.remove {
 a.remove:hover {
   font-weight: 700;
 }
-
+.clicable:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
 
 .page {
   position: absolute;

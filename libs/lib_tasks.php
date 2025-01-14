@@ -9,9 +9,24 @@ function deleteFolders($folder_id){
     return $stmt ->rowCount();
 }
 
-function addFolders($data){
+function addFolders($folder_name) {
+    global $pdo;
+    $current_user_id = getCurrentUserId();
 
+    // کوئری SQL صحیح
+    $sql = "INSERT INTO `folders` (name, user_id) VALUES (:folder_name, :user_id);";
+    $stmt = $pdo->prepare($sql);
+
+    // مقادیر پارامترها
+    $stmt->execute([
+        ':folder_name' => $folder_name,
+        ':user_id' => $current_user_id
+    ]);
+
+    // بازگشت تعداد ردیف‌های تغییر یافته
+    return $stmt->rowCount();
 }
+
 
 function getFolders(){
     global $pdo;
