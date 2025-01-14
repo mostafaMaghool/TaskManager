@@ -1,0 +1,21 @@
+{
+    "name": "hi/todo-list",
+    "description": "A simple list project (ajax ,php, mysql)",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hi\\TodoList\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mostafa",
+            "email": "mostafa.maghool.13811@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "hekmatinasser/verta": "^8.4"
+    }
+}

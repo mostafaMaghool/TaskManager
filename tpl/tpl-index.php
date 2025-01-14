@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Task manager UI</title>
-  <link rel="stylesheet" href="./style.css">
+  <title><?= SITE_TITLE ?></title>
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
 
 </head>
 <body>
@@ -21,13 +22,23 @@
         </div>
       </div>
       <div class="menu">
-        <div class="title">Navigation</div>
+        <div class="title">Folders</div>
         <ul>
-          <li> <i class="fa fa-home"></i>Home</li>
-          <li><i class="fa fa-signal"></i>Activity</li>
-          <li class="active"> <i class="fa fa-tasks"></i>Manage Tasks</li>
-          <li> <i class="fa fa-envelope"></i>Messages</li>
+          <?php foreach ($folders as $folder): ?>
+          <li> 
+            <a href="?folder_id=<?= $folder->id ?>"><i class="fa fa-folder"></i><?= $folder->name ?></a>
+            <a href="?delete_folder=<?= $folder->id ?>" class="remove"> X </a>
+          </li>
+            <?php endforeach; ?>
+
+
+          <li class="active"> <i class="fa fa-tasks"></i>Current Folder</li>
+
         </ul>
+      </div>
+      <div>
+          <input type="text" id="newFolderInput" placeholder="add new folder"/>
+          <button id="newFolderBtn" class="btn">+</button>
       </div>
     </div>
     <div class="view">
@@ -71,7 +82,7 @@
   </div>
 </div>
 <!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="assets/js/script.js"></script>
 
 </body>
 </html>

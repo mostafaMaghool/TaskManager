@@ -4,6 +4,16 @@ html {
   background-image: url(http://www.ultraimg.com/images/2UeGfhZ.jpg);
 }
 
+
+input{
+  border-block-color: aquamarine;
+  border-radius: 6px;
+  padding: 3px 10px;
+  text-align: center;
+}
+button{
+  background-color: #79BC46;
+}
 body {
   padding: 0px;
   margin: 0px;
@@ -11,6 +21,16 @@ body {
   font-size: 14px;
   font-smoothing: antialiased;
 }
+a.remove {
+  color: red;
+  float: right;
+  font-weight: 200;
+  padding-right: 5px;
+}
+a.remove:hover {
+  font-weight: 700;
+}
+
 
 .page {
   position: absolute;
@@ -120,6 +140,13 @@ body {
 .main .nav .menu ul {
   padding-left: 0px;
 }
+
+.main .nav .menu ul li a{
+  text-decoration: none;
+  color: #45cfeb;
+}
+
+
 .main .nav .menu ul li {
   cursor: pointer;
   list-style: none;
