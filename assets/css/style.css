@@ -154,6 +154,16 @@ a.remove:hover {
   text-decoration: none;
   color: #79BC46;
 }
+.success{
+  color: #1da800;
+  position: relative;
+  z-index: 999;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background: aliceblue;
+  border-left: 3px solid;
+}
 
 
 .main .nav .menu ul li {

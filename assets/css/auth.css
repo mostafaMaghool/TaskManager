@@ -63,6 +63,16 @@ button:focus {
   background-color: #AE94DE;
 }
 
+.success{
+  color: #1da800;
+  position: relative;
+  z-index: 999;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background: aliceblue;
+  border-left: 3px solid;
+}
 #panel-box {
   position: absolute;
   top: 0;

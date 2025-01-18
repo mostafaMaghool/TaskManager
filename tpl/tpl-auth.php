@@ -14,16 +14,16 @@
 			<div class="auth-form on" id="login">
 				<div id="form-title">Log In</div>
 				<form action="<?= site_url('auth.php?action=login') ?>" method="POST">
-					<input name="username" type="text" required="required" placeholder="username"/>
-					<input name="password" type="password" required="required" placeholder="password"/>
+					<input name="email" type="text" required="required" placeholder="email"/>
+					<input name="pass" type="password" required="required" placeholder="password"/>
 					<button type="Submit">Log In</button>
 				</form>
 			</div>
 			<div class="auth-form" id="signup" >
 				<div id="form-title">Register</div>
 				<form action="<?= site_url('auth.php?action=register') ?>" method="POST">
-					<input name="username" type="text" required="required" placeholder="username"/>
-					<input name="password" type="password" required="required" placeholder="password"/>
+					<input name="name" type="text" required="required" placeholder="name"/>
+					<input name="pass" type="password" required="required" placeholder="password"/>
 					<input name="email" type="text" required="required" placeholder="email"/>
 					<button type="Submit">Sign Up</button>
 				</form>

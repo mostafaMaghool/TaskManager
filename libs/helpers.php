@@ -14,8 +14,12 @@ function site_url($uri = ''){
 }
 
 function diePage($msg){
-    echo "<div>" . $msg . "</div>";
+    echo "<div style='color: red;   position: relative;   z-index: 999;   padding: 10px;   margin: 10px;   border-radius: 5px;   background: aliceblue;   border-left: 3px solid;'>" . $msg . "</div>";
+
     die();
+}
+function message($msg, $cssClass = 'info'){
+    echo "<div class'$cssClass' style='color: red;   position: relative;   z-index: 999;   padding: 10px;   margin: 10px;   border-radius: 5px;   background: aliceblue;   border-left: 3px solid;'>" . $msg . "</div>";
 }
 
 
