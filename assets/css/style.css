@@ -14,6 +14,7 @@ input{
 button{
   background-color: #79BC46;
 }
+
 body {
   padding: 0px;
   margin: 0px;
@@ -147,6 +148,11 @@ a.remove:hover {
 .main .nav .menu ul li a{
   text-decoration: none;
   color: #45cfeb;
+}
+
+.main .nav .menu ul li.active a{
+  text-decoration: none;
+  color: #79BC46;
 }
 
 
