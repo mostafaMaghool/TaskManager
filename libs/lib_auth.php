@@ -14,6 +14,9 @@ function getUserByEmail($email){
     return $records[0] ?? null;
 }
 
+function logout(){
+    unset($_SESSION['login']);
+}
 
 function login($email, $pass){
     $user = getUserByEmail($email);
@@ -36,7 +39,7 @@ function isLoggedIn(){
     
 }
 function getLoggedInUser(){
-    return isset($_SESSION['login']) ?? null;
+    return $_SESSION['login'] ?? null;
     
 }
 

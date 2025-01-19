@@ -4,9 +4,13 @@ include "bootstrap/init.php";
 
 if(!isLoggedIn()){
     // redirect to aut form
-    header("location: " . site_url('auth.php'));
+    // header("location: " . site_url('auth.php'));
+    // redirect(site_url('auth.php'));
 }
 
+if(isset($_GET['logout'])){
+    logout();
+}
 
 
 // use Hekmatinasser\Verta\Verta;

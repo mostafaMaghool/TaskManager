@@ -12,7 +12,12 @@
 <div class="page">
   <div class="pageHeader">
     <div class="title">Dashboard</div>
-    <div class="userPanel"><i class="fa fa-chevron-down"></i><span class="username">John Doe </span><img src="#" width="40" height="40"/></div>
+    
+    <div class="userPanel">
+    <a href="<?= site_url("?logout=1") ?>"><i class="fa fa-sign-out"></i></a>
+    <span class="username"><?= getLoggedInUser()-> name ?? 'NoUser'; ?></span><img src="#" width="40" height="40"/></div>
+    
+
   </div>
   <div class="main">
     <div class="nav">
@@ -27,9 +32,10 @@
         <li class="<?= isset($_GET['folder_id']) ? '' : 'active' ?>">
           <a href="<?= site_url()?>"><i class="fa fa-tasks"></i> ALL</a>
         </li>
-
+  
           <!-- <?php foreach ($folders as $folder): ?> -->
-            <li class="<?= ($_GET["folder_id"] == $folder->id) ? 'active' : '' ?>">
+            <li class="<?= (isset($_GET["folder_id"]) && $_GET["folder_id"] == $folder->id) ? 'active' : '' ?>">
+
               <a href="?folder_id=<?= $folder->id ?>"><i class="fa fa-folder"></i><?= $folder->name ?></a>
               <a href="?delete_folder=<?= $folder->id ?>" class="remove" onclick='return confirm("are you sure to delete ? ");'> X </a>
             </li>
@@ -87,6 +93,10 @@
     </div>
   </div>
 </div>
+
+
+
+
 <!-- partial -->
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="assets/js/script.js"></script>
 
